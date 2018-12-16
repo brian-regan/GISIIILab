@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1,user-scalable=no">
+  <title>Air Pollution</title>
+  <link rel="stylesheet" href="https://js.arcgis.com/4.10/esri/css/main.css">
+
+  <!-- Load Bootstrap -->
+  <!-- JQuery -->
+  <script src="js/jquery-3.3.1.min.js"></script>
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+  <script src="https://js.arcgis.com/4.10/"></script>
+  <script src="js/main.js"></script>
+  <link rel='stylesheet' href='css/style.css'>
+
+  <!-- Load Fonts-->
+  <link href="https://fonts.googleapis.com/css?family=Lato|Roboto" rel="stylesheet">
+
+  <!-- Scrolling Script -->
+  <script src="js/scrolling.js"></script>
+
+    
+</head>
+
+<body class="calcite">
+  <!-- Bootstrap Navbar -->
+  <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#">Traffic Pollution</a>
+      <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button> -->
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-item nav-link" href="#Home">Home</a>
+          <a class="nav-item nav-link" href="#Map">Map</a>
+          <a class="nav-item nav-link" href="#About">About</a>
+          <a class="nav-item nav-link" href="#Legal">Legal</a>
+        </div>
+      </div>
+    </nav>
+
+  
+  <section id="Home">
+    <h1>Traffic Pollution</h1>
+    <div class="container" id="opening_container">
+      <div class="row">
+        <div class="col-2"></div>
+        <div class="col-8" id="intro_body">
+          <p>Here goes some text about why this thing is the way it is. Pretty cool right</p>
+        </div>
+        <div class="col-2"></div>
+      </div>
+    </div>
+  </section>
+
+  <section id='Map'>
+    <h2>Map</h2>
+    <div id="viewDiv"></div>
+  </section>
+
+  <section id="About">
+    <h2>About</h2>
+    <div class="container">
+        <div class="row">
+          <div class="col-2"></div>
+          <div class="col-8" id="intro_body">
+            <p>This application was developed by <a href="https://n.ethz.ch/~bregan/" target="_blank">Brian Regan</a>,
+              Data Science Master Student at ETH Zürich, for the GIS III class, part of the <a href="http://www.gis.ethz.ch/" target="_blank">Chair of Geoinformation Engineering</a>. 
+            It demonstrates data collected using a SenseBox built a few weeks prior to the design of this site. For the map 
+          functionality it uses the <a href="https://developers.arcgis.com/javascript/" target="_blank">ArcGIS API for JavaScript</a>.</p>
+          </div>
+          <div class="col-2"></div>
+        </div>
+      </div>
+
+    <a href="https://sensebox.de/" target="_blank">
+      <img src="assets/sensebox.png" id="sensebox">
+    </a>
+    
+  </section>
+
+  <section id="Legal">
+    <h2>Legal</h2>
+  </section>
+  
+
+  <!-- <span id="layerToggle">
+    Air Pollutant Measurement
+    <input type="checkbox"  id="toggle">
+  </span> -->
+</body>
+</html>
