@@ -25,17 +25,12 @@ require([
     view.when(function() {
       // get the first layer in the collection of operational layers in the WebMap
       // when the resources in the MapView have loaded.
-      var p10 = webmap.layers.getItemAt(0);
-      var p25 = webmap.layers.getItemAt(1);
-      p10.id = "p10_layer"
+      var p25 = webmap.layers.getItemAt(2);
       p25.id = "p25_layer"
 
       var legend = new Legend({
         view: view,
         layerInfos: [
-        {
-          layer: p10
-        },
         {
           layer: p25
         }
@@ -54,7 +49,6 @@ require([
 
     p25_layer_toggle.addEventListener("change", function () {
       p25.visible = toggle.checked;
-      p10.visible = ! toggle.checked
     });
 
     });
