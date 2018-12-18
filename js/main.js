@@ -37,17 +37,21 @@ require([
       var p25 = webmap.layers.getItemAt(2);
       p25.id = "p25_layer"
 
-      var legend = new Legend({
-        view: view,
-        layerInfos: [
-        {
-          layer: p25
-        }
-        ]
-      });
+      // var legend = new Legend({
+      //   view: view,
+      //   layerInfos: [
+      //   {
+      //     layer: p25
+      //   }
+      //   ]
+      // });
 
-      // Add widget to the bottom right corner of the view
-      view.ui.add(legend, "bottom-right");
+      // // Add widget to the bottom right corner of the view
+      // view.ui.add(legend, "bottom-right");
+
+      var layerList = new LayerList({
+        view: view
+      });
 
       /*****************************************************************
      * The visible property on the layer can be used to toggle the
