@@ -4,6 +4,16 @@ html,
       height: 100%;
     }
 
+    .toggle {
+      right: 20px;
+      position: absolute;
+      z-index: 99;
+      background-color: white;
+      border-radius: 8px;
+      padding: 10px;
+      opacity: 0.75;
+    }
+
     #viewDiv {
       height: 90%;
       width: 100%;
@@ -12,13 +22,10 @@ html,
 
    #layerToggle {
       top: 20px;
-      right: 20px;
-      position: absolute;
-      z-index: 99;
-      background-color: white;
-      border-radius: 8px;
-      padding: 10px;
-      opacity: 0.75;
+   }
+
+   #legendToggle {
+    top: 70px;
    }
 
    

@@ -20,6 +20,7 @@ require([
     });
 
     var p25_layer_toggle = document.getElementById("toggle");
+    var legend_toggle = document.getElementById('legend-toggle')
 
     // 1 - Create the widget
     var toggle_basemap = new BasemapToggle({
@@ -37,32 +38,29 @@ require([
       var p25 = webmap.layers.getItemAt(2);
       p25.id = "p25_layer"
 
-      // var legend = new Legend({
-      //   view: view,
-      //   layerInfos: [
-      //   {
-      //     layer: p25
-      //   }
-      //   ]
-      // });
-
-      // // Add widget to the bottom right corner of the view
-      // view.ui.add(legend, "bottom-right");
-
-      var layerList = new LayerList({
-        view: view
+      var legend = new Legend({
+        view: view,
+        layerInfos: [
+        {
+          layer: p25
+        }
+        ]
       });
 
-      /*****************************************************************
-     * The visible property on the layer can be used to toggle the
-     * layer's visibility in the view. When the visibility is turned off
-     * the layer is still part of the map, which means you can access
-     * its properties and perform analysis even though it isn't visible.
-     *******************************************************************/
+      // Add widget to the bottom right corner of the view
+      view.ui.add(legend, "bottom-right");
 
-    p25_layer_toggle.addEventListener("change", function () {
-      p25.visible = toggle.checked;
-    });
+      p25_layer_toggle.addEventListener("change", function () {
+        p25.visible = toggle.checked;
+      });
+
+      legend_toggle.addEventListener("change", function () { 
+        if(legend_toggle.checked){
+          view.ui.add(legend, "bottom-right");
+        } else {
+          view.ui.remove(legend);
+        }
+      });
 
     });
 
