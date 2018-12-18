@@ -1,10 +1,11 @@
 require([
     "esri/views/MapView",
     "esri/widgets/Legend",
-    "esri/WebMap"
+    "esri/WebMap",
+    "esri/widgets/BasemapToggle"
   ],
   function(
-    MapView, Legend, WebMap
+    MapView, Legend, WebMap, BasemapToggle
   ) {
 
     var webmap = new WebMap({
@@ -20,7 +21,15 @@ require([
 
     var p25_layer_toggle = document.getElementById("toggle");
 
-    
+    // 1 - Create the widget
+    var toggle_basemap = new BasemapToggle({
+      // 2 - Set properties
+      view: view, // view that provides access to the map's 'topo' basemap
+      nextBasemap: "hybrid" // allows for toggling to the 'hybrid' basemap
+    });
+
+    // Add widget to the top right corner of the view
+    view.ui.add(toggle_basemap, "bottom-left");
 
     view.when(function() {
       // get the first layer in the collection of operational layers in the WebMap

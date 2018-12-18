@@ -36,7 +36,7 @@
 <body class="calcite">
   <!-- Bootstrap Navbar -->
   <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand" href="#">Traffic Pollution</a>
+      <a class="navbar-brand" href="#">Zürich Air</a>
       <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button> -->
@@ -52,12 +52,24 @@
 
   
   <section id="Home">
-    <h1>Traffic Pollution</h1>
+    <h1>Zürich Air</h1>
     <div class="container" id="opening_container">
       <div class="row">
         <div class="col-2"></div>
         <div class="col-8" id="intro_body">
-          <p>Here goes some text about why this thing is the way it is. Pretty cool right</p>
+          <p>Ever wondered about air quality in Zürich? This map shows the PM 2.5 measurements for a small section
+            of central Zürich roadway, collected using a SenseBox, alongside traffic data for the city allowing you to
+            examine the relationship between vehicular traffic and air quality.
+          </p>
+          <p>
+            <a href="https://www.epa.vic.gov.au/your-environment/air/air-pollution/pm25-particles-in-air">EPA Victoria</a>
+            states <i>"PM2.5 particles are smaller than 2.5 micrometres in diameter. They are up to 30 times smaller than the 
+            width of a human hair"</i>. They often occur from burning of fossil fuels and other materials.
+          </p>
+          <p>
+            <i>"Children, people over 65, pregnant women and people with existing heart or lung conditions (including asthma) 
+            are more sensitive to the effects of breathing in fine particles"</i>.
+          </p>
         </div>
         <div class="col-2"></div>
       </div>
@@ -66,7 +78,12 @@
 
   <section id='Map'>
     <h2>Map</h2>
-    <div id="viewDiv"></div>
+    <div id="viewDiv">
+      <span id="layerToggle">
+        Toggle PM 2.5
+        <input type="checkbox"  id="toggle" checked>
+      </span>
+    </div>
   </section>
 
   <section id="About">
@@ -95,9 +112,6 @@
   </section>
   
 
-  <!-- <span id="layerToggle">
-    Air Pollutant Measurement
-    <input type="checkbox"  id="toggle">
-  </span> -->
+
 </body>
 </html>
