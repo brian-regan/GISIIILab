@@ -1,1 +1,3 @@
 # GISIIILab
+
+This application was developed by [Brian Regan](https://n.ethz.ch/~bregan/), Data Science Master Student at ETH Zürich for the GIS III class, part of the [Chair of Geoinformation Engineering](http://www.gis.ethz.ch/). It demonstrates data collected using a SenseBox built a few weeks prior to the design of this site. For the map functionality it uses the [ArcGIS API for JavaScript](https://developers.arcgis.com/javascript/).
