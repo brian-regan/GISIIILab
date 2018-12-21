@@ -50,10 +50,12 @@ require([
       // Add widget to the bottom right corner of the view
       view.ui.add(legend, "bottom-right");
 
+      // add toggle ability for p25
       p25_layer_toggle.addEventListener("change", function () {
         p25.visible = toggle.checked;
       });
 
+      // add toggle ability for legend
       legend_toggle.addEventListener("change", function () { 
         if(legend_toggle.checked){
           view.ui.add(legend, "bottom-right");
