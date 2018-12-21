@@ -38,11 +38,19 @@ require([
       var p25 = webmap.layers.getItemAt(2);
       p25.id = "p25_layer"
 
+      var traffic = webmap.layers.getItemAt(0);
+    
+
+
+      // add legend
       var legend = new Legend({
         view: view,
         layerInfos: [
         {
           layer: p25
+        },
+        {
+          layer: traffic
         }
         ]
       });

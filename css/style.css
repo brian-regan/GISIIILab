@@ -4,6 +4,7 @@ html,
       height: 100%;
     }
 
+    /* General Toggle Properites */
     .toggle {
       right: 20px;
       position: absolute;
@@ -14,21 +15,23 @@ html,
       opacity: 0.75;
     }
 
+    /* Properties specific to each toggle */
+    #layerToggle {
+        top: 20px;
+    }
+
+    #legendToggle {
+      top: 70px;
+    }
+    
+    /* Map styling */
     #viewDiv {
       height: 90%;
       width: 100%;
       position: relative;
     }
 
-   #layerToggle {
-      top: 20px;
-   }
-
-   #legendToggle {
-    top: 70px;
-   }
-
-   
+   /* Font styling */
    h1, h2, h3, h4, h5 h6 {
     font-family: 'Roboto', sans-serif;
     text-align: center;
@@ -40,22 +43,22 @@ html,
     font-size: 55px;
   }
 
-
    body {
      font-family: 'Lato', 'Arial';
      overflow-x: hidden;
    }
 
    #opening_container {
-     /* height: 400px; */
      text-align: center;
    }
 
+   /* Padding for Intro section */
    #intro_body {
      padding-top: 40px;
      padding-bottom: 80px;
    }
    
+   /* General Section Style */
    section {
      display: block;
      width: 100%;
@@ -64,6 +67,7 @@ html,
      position: relative;
    }
 
+   /* Style for floating sensebox image */
    #sensebox {
     width: 50%;
     position: absolute;
@@ -73,6 +77,7 @@ html,
 
    }
 
+   /* Zoom Sensebox image on hover */
    #sensebox:hover{
     transform: scale(1.1);
    }
